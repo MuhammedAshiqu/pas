@@ -16,6 +16,7 @@ import slide2 from '../../../slide2.jpg';
 import footer1 from '../../Footer1/footer1';
 import Footer1 from '../../Footer1/footer1';
 import Productd from '../productdescription/Productd';
+// import img from '../../Hero-img.jpg'
 
 function Main() {
     const history = useHistory();
@@ -54,9 +55,7 @@ function Main() {
             <div className='hero'>
                 <div className='hero-img'>
                     <img
-                        src={
-                            'https://emarsys.com/app/uploads/fly-images/83576/GettyImages-1198383207-1110x9999.jpg'
-                        }
+                        src=''
                         alt=''
                     />
                 </div>

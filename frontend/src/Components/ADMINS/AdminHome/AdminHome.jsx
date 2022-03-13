@@ -51,31 +51,6 @@ function AdminHome() {
       <h1>Welcome to Admin Home page</h1>
       
       
-        {/* <Table width='100%' striped bordered hover>
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>Product name Name</th>
-              <th>Price</th>
-              <th>Uploaded By</th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.map((i, index) => (
-              <tr>
-                <td>{index + 1}</td>
-                <td>{i.Name}</td>
-                <td>{i.Price}</td>
-                <td>{i.CreatedBy}</td>
-                 
-              </tr>
-            ))}
-
-
-
-          </tbody>
-        </Table> */}
-
       
       {/* <Datatable items={items} /> */}
       <button onClick={logout}>LOG OUT</button>

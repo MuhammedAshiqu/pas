@@ -30,7 +30,8 @@ function ViewService() {
             <table class="styled-table">
                 <thead>
                     <tr>
-                        <th>Service center</th>
+                        <th>Name</th>
+                        <th>Job</th>
                         <th>Location</th>
                         <th>Contact</th>
         
@@ -39,6 +40,7 @@ function ViewService() {
                 <tbody>
                     {data.map((i) => (
                         <tr>
+                            <td>{i.name}</td>
                             <td>{i.item}</td>
                             <td>{i.location}</td>
                             <td>{i.contact}</td>

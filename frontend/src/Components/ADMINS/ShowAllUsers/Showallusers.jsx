@@ -28,7 +28,7 @@ function Showallusers() {
     return (
         <div className='main-i' >
             
-            <Table striped bordered hover variant="dark">
+
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -52,7 +52,7 @@ function Showallusers() {
 
 
                 </tbody>
-            </Table>
+
             
 
 

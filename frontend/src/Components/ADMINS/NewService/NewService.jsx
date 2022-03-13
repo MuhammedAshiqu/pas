@@ -8,6 +8,7 @@ function NewService() {
   const history=useHistory()
   const [show, setShow] = useState(false);
   const [input, setinput] = useState({
+    name:'',
     item:'',
     location:'',
     contact:''
@@ -44,21 +45,24 @@ useEffect(() => {
         </Modal.Header>
         <Modal.Body>
         <div className='demo'>
-            <input type="text" name="item" placeholder="item" onChange={handleChange} />
+            <input type="text" name="name" placeholder="Name" onChange={handleChange} />
+        </div>
+        <div className='demo'>
+            <input type="text" name="item" placeholder="Job" onChange={handleChange} />
         </div>
         <div className='demo1'>
-            <input type="text" name="location" placeholder="location" onChange={handleChange}  />
+            <input type="text" name="location" placeholder="Location" onChange={handleChange}  />
         </div>
         <div className='demo2'>
-            <input type="text" name="contact" placeholder="contact" onChange={handleChange} />
+            <input type="text" name="contact" placeholder="Contact" onChange={handleChange} />
         </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
           <div>
-            <input type="button" value="submit" onClick={handleSubmit} />
+            <Button variant="success" value="submit" onClick={handleSubmit} >Submit</Button>
         </div>
           {/* <Button variant="primary" onClick={handleClose}>
             Save Changes

@@ -43,7 +43,7 @@ function Change() {
         <div className='main-i' >
             
  <>
- <Table striped bordered hover variant="dark">
+
     <thead>
         <tr>
             <th>Name</th>
@@ -66,7 +66,7 @@ function Change() {
        
         
     </tbody>
-</Table>
+ 
 <div className="dlt-btn">
 <button className='btn btn-danger' onClick={deleteAllItem} >Delete All</button>
 </div>

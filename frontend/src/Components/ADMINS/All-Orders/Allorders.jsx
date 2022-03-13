@@ -17,7 +17,7 @@ function Allorders() {
         <div>
             <div className='main-i' >
             
-            <table class="table table-hover">
+         
                 <thead>
                     <tr>
                         <th>Order id</th>
@@ -42,7 +42,7 @@ function Allorders() {
 
 
                 </tbody>
-            </table>
+
             
 
 

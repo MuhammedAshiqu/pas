@@ -2,7 +2,7 @@
 import './App.css';
 import Main from './Components/USERS/Main/Main';
 import Header from './Components/USERS/Header/Header';
-import {BrowserRouter,Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import About from './Components/USERS/About/About';
 // import Contact from './Components/USERS/Contact/Contact';
 import Signup from './Components/USERS/Signup/Signup';
@@ -35,74 +35,74 @@ import Productview from './Components/USERS/Productview/Productview';
 import Footer from "./Components/Footer copy/Footer";
 import ChatTable from './Components/USERS/Chattable/Chattable';
 
- import Navbar1 from "./Components/Navbar/Navbar";
- import Navbar2 from "./Components/Navbar2/Navbar2";
+import Navbar1 from "./Components/Navbar/Navbar";
+import Navbar2 from "./Components/Navbar2/Navbar2";
 
 
 function App() {
-  const { Users,Cartcount,AdminTrue,IsLoaged } = useContext(DataContext)
+  const { Users, Cartcount, AdminTrue, IsLoaged } = useContext(DataContext)
   const [adminTrue, setadminTrue] = AdminTrue
-  const [isLoaged,setisLoaged] =IsLoaged
+  const [isLoaged, setisLoaged] = IsLoaged
   const [thing, setthing] = useState(false)
 
   useEffect(() => {
-   let it= localStorage.getItem('user')
-   it && setisLoaged(true)
-   setthing(it)
-    
-    axios.get('http://localhost:8008/signin').then((res)=>{
+    let it = localStorage.getItem('user')
+    it && setisLoaged(true)
+    setthing(it)
+
+    axios.get('http://localhost:8008/signin').then((res) => {
       console.log(res);
       res.user && setisLoaged(true)
     })
-    
+
   }, [])
-   return (
+  return (
     <div className="App">
       <BrowserRouter>
 
-      {!adminTrue ? <Navbar1></Navbar1> : <Adminheader/> }
-      
-      <Navbar2></Navbar2>
-      
-      
-      
-      
-      <Route path ='/admin' component={Admin} />
-      <Route path ='/adminhome' component={Change} />
-      <Route path ='/getallusers' component={Showallusers} />
-      <Route path ='/allorders' component={Allorders} />
-      {/* <Route path='/admins' component={AdminHome} /> */}
-      <Route path='/service' component={NewService}></Route>
+        {!adminTrue ? <Navbar1></Navbar1> : <Adminheader />}
+
+        <Navbar2></Navbar2>
 
 
 
 
-      {/* Users Section */}
-      <Route exact path='/'> <Main/> </Route>
-      <Route path ='/Login' component={About} />
-      <Route path='/Contact' component={Contact} />
-      <Route path='/Signup' component={Signup} />
-      <Route path='/Cart' component={Cart} />
-      <Route path='/place-order' component={Placeorder} />
-      <Route path='/order-success' component={Ordersuccess} />
-      <Route path='/profile' component={Profile} />
-      <Route path='/Chat/:id' component={Chat} />
-      <Route path='/viewService' component={ViewService}></Route>
-      <Route path='/productd/:id' component={Productd} />
-      <Route path='/productview' component={Productview} />
-      <Route path='/messages' component={ChatTable} />
+        <Route path='/admin' component={Admin} />
+        <Route path='/adminhome' component={Change} />
+        <Route path='/getallusers' component={Showallusers} />
+        <Route path='/allorders' component={Allorders} />
+        {/* <Route path='/admins' component={AdminHome} /> */}
+        <Route path='/service' component={NewService}></Route>
 
-      {/* <Route path='/*' component={Cart} /> */}
 
-      
-      <Route path='/add-product' component={NewAdd} />
 
-      {/* <Footer1 /> */}
-      {/* <Footer /> */}
-      <Footer></Footer>
+
+        {/* Users Section */}
+        <Route exact path='/'> <Main /> </Route>
+        <Route path='/Login' component={About} />
+        <Route path='/Contact' component={Contact} />
+        <Route path='/Signup' component={Signup} />
+        <Route path='/Cart' component={Cart} />
+        <Route path='/place-order' component={Placeorder} />
+        <Route path='/order-success' component={Ordersuccess} />
+        <Route path='/profile' component={Profile} />
+        <Route path='/Chat/:id' component={Chat} />
+        <Route path='/viewService' component={ViewService}></Route>
+        <Route path='/productd/:id' component={Productd} />
+        <Route path='/productview' component={Productview} />
+        <Route path='/messages' component={ChatTable} />
+
+        {/* <Route path='/*' component={Cart} /> */}
+
+
+        <Route path='/add-product' component={NewAdd} />
+
+        {/* <Footer1 /> */}
+        {/* <Footer /> */}
+        {/* <Footer></Footer> */}
       </BrowserRouter>
-      
-      
+
+
     </div>
   );
 }

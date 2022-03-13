@@ -8,6 +8,7 @@ function Service() {
     const [reload, setreload] = useState(false)
 
     const [input, setinput] = useState({
+        name:'',
         item:'',
         location:'',
         contact:''
@@ -34,13 +35,16 @@ function Service() {
     <div className="container" >
         <h2>Add here!!!</h2>
         <div className='demo'>
-            <input type="text" name="item" placeholder="item" onChange={handleChange} />
+            <input type="text" name="name" placeholder="Name" onChange={handleChange} />
+        </div>
+        <div className='demo'>
+            <input type="text" name="item" placeholder="Item" onChange={handleChange} />
         </div>
         <div className='demo1'>
-            <input type="text" name="location" placeholder="location" onChange={handleChange}  />
+            <input type="text" name="location" placeholder="Location" onChange={handleChange}  />
         </div>
         <div className='demo2'>
-            <input type="text" name="contact" placeholder="contact" onChange={handleChange} />
+            <input type="text" name="contact" placeholder="Contact" onChange={handleChange} />
         </div>
         <br />
         <div>
